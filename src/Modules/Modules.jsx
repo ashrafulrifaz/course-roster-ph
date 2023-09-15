@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Module from "../Module/Module"
 
-function Modules(){
+function Modules({handleDatas}){
    let [courses, setCourses] = useState([])
 
    useEffect(course => {
@@ -13,7 +13,7 @@ function Modules(){
    return (
       <div className="w-3/4 gap-4 grid grid-cols-3">
          {
-            courses.map(course => <Module course={course}></Module>)
+            courses.map((course, idx) => <Module key={idx} handleDatas={handleDatas} course={course}></Module>)
          }
       </div>
    )

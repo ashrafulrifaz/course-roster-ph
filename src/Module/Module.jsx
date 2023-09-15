@@ -1,4 +1,4 @@
-function Module({course}){
+function Module({course, handleDatas}){
    let {title, image, description, price, credit}= course;
    
    return (
@@ -25,7 +25,7 @@ function Module({course}){
                <p className="text-[#1C1B1B99]">Credit: {credit}hr</p>
             </div>
          </div>
-         <button className="bg-blue-500 text-white font-semibold rounded-lg border-0 w-full py-1.5">Select</button>
+         <button onClick={() => handleDatas(course)} className="cursor-pointer bg-blue-500 text-white font-semibold rounded-lg border-0 w-full py-1.5">Select</button>
       </div>
    )
 }
