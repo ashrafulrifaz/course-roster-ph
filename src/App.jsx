@@ -12,12 +12,6 @@ function App() {
   let [creditTime, setCreditTime] = useState(0)
   let [totalPrice, setTotalPrice] = useState(0)
 
-  let handleToast = () => {
-    if((creditTime + credit) > 20){
-      toast('hello')
-    }
-  }
-
   let handleDatas = data => {
     let {credit, price, id} = data;
 
